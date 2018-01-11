@@ -1,0 +1,18 @@
+{
+    "name": "cyrnicolase/laravel-response-hjson",
+    "description": "自定义JSON下行格式,包含自定义错误码,Http码",
+    "keywords": ["json", "laravel", "response"],
+    "type": "library",
+    "require": {
+        "php": "7.0.*"
+    },
+    "authors": [
+        {
+            "name": "cyrnicolase",
+            "email": "nicolase.chen@gmail.com"
+        }
+    ],
+    "autoload": {
+        "HjsonResponse\\": "src"
+    }
+}
