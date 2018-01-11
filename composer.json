@@ -13,6 +13,8 @@
         }
     ],
     "autoload": {
-        "HjsonResponse\\": "src"
+        "psr-4": {
+            "HjsonResponse\\": "src/"
+        }
     }
 }
