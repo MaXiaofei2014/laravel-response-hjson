@@ -58,7 +58,7 @@ class HjsonResponse
         }
         $response_data = [
             'errno' => $errno ?? $this->getErrorCode(),
-            'error' => '',
+            'message' => '',
             'data' => [],
         ];
 
@@ -66,10 +66,10 @@ class HjsonResponse
             $response_data['data'] = $data;
         } elseif ($data instanceof Exception) {
             $response_data['errno'] = $data->getCode() ?: 5000;
-            $response_data['error'] = $data->getMessage();
+            $response_data['message'] = $data->getMessage();
             $http_code = $http_code ?? 500;
         } elseif (is_string($data)) {
-            $response_data['error'] = $data;
+            $response_data['message'] = $data;
         }
         $http_code = $http_code ?? $this->getHttpCode();
 
